@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to add a new task (optionally save to Local Storage)
     function addTask(taskText, save = true) {
+        if (!taskText.trim()) return; // Ignore empty tasks
+
         const listItem = document.createElement('li'); // Create a new list item
         listItem.textContent = taskText; // Set the task text
 
